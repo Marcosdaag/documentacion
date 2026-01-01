@@ -1,0 +1,73 @@
+0. Lógica de Programación
+Algoritmos y Estructuras de datos (Arrays, Maps, Sets).
+Complejidad algorítmica (Big O notation) - Importante para no bloquear el Event Loop.
+
+1. IDE y Entorno
+VS Code (Es el estándar absoluto).
+Extensiones clave: ESLint, Prettier, NestJS File Generator.
+Terminal / Bash / Zsh.
+
+2. Lenguaje Base (TypeScript & JavaScript Moderno)
+TypeScript: Tipos avanzados (Generics, Utility Types, Mapped Types).
+Asincronía: async/await, Promesas, Callback Hell (y cómo evitarlo).
+Node.js Core: Entender el Event Loop, process, Buffer, y Streams.
+
+3. Bases de Datos (Persistencia)
+Relacionales: PostgreSQL (Recomendada) o MySQL.
+NoSQL: MongoDB (usando Mongoose).
+Caché en Memoria (Nuevo): Redis (Vital para performance y sesiones).
+
+ORM:
+TypeORM (Estilo tradicional, muy integrado en Nest).
+Prisma (Moderno, excelente tipado).
+
+4. POO y Arquitectura
+Clases, Interfaces y Clases Abstractas.
+Inyección de Dependencias (DI): El corazón de NestJS.
+Patrones de Diseño: Singleton, Factory, Strategy (muy útil en servicios).
+Arquitectura Avanzada (Nuevo):
+Arquitectura Hexagonal (Ports and Adapters).
+DDD (Domain-Driven Design) básico.
+
+5. WEB (Fundamentos)
+Protocolo HTTP/HTTPS (Verbos, Status Codes, Headers).
+Motores HTTP: Entender que Nest corre sobre Express (por defecto) o Fastify (para alta performance).
+
+6. NestJS (El Framework - Core)
+Bloques de construcción: Módulos, Controladores y Servicios (Providers).
+Validación de Datos: class-validator, class-transformer y DTOs.
+Configuración (Nuevo): Módulo @nestjs/config + Validación de variables de entorno (con Joi o Zod) para evitar errores en producción.
+Interceptors y Pipes: Para transformar respuestas y validar entradas.
+Manejo de Errores: Exception Filters globales.
+
+7. Microservicios y Escalabilidad (Backend Asíncrono)
+Concepto de Monolito Modular vs. Microservicios.
+Transportadores: RabbitMQ, Kafka o gRPC.
+Procesamiento en Segundo Plano (Nuevo & Vital):
+BullMQ (basado en Redis) para manejar "Jobs" pesados (emails, reportes, procesamiento de imagen) sin bloquear la API.
+Cron Jobs: @nestjs/schedule para tareas programadas.
+
+8. Complementos (Programación Reactiva)
+RxJS: Observables, Subjects y operadores (map, tap, switchMap). Nest usa esto internamente.
+Streams de Node: Para manipulación de archivos grandes.
+
+9. Seguridad
+Autenticación: Passport.js (Strategies: Local, JWT).
+Autorización: Guards (Roles y Permisos - RBAC).
+Hashing: Bcrypt o Argon2.
+Protección HTTP: Helmet (Cabeceras de seguridad) y CORS.
+Rate Limiting (Evitar ataques de fuerza bruta).
+
+10. Testing
+Unit Testing: Jest (Mocks, Spies).
+E2E Testing: Supertest (Probando la API completa).
+Integration Testing: Usar base de datos en memoria o Testcontainers (Docker).
+
+11. Herramientas Complementarias y DevOps
+Gestores de Paquetes: npm, yarn o pnpm (más rápido y eficiente en disco).
+Docker: Dockerfile y docker-compose (para levantar la DB y Redis localmente).
+Documentación: Swagger (OpenAPI) - @nestjs/swagger.
+Logging Profesional (Nuevo):
+Dejar console.log. Usar Winston o Pino para logs estructurados (JSON) que puedan leerse en sistemas de monitoreo.
+Process Manager: PM2 (Para desplegar en servidores tradicionales).
+CI/CD: GitHub Actions básico.
